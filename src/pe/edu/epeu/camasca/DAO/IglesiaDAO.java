@@ -8,6 +8,7 @@ package pe.edu.epeu.camasca.DAO;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import pe.edu.epeu.camasca.config.conexion;
@@ -22,25 +23,15 @@ public class IglesiaDAO {
     private Statement st;
     private ResultSet rs;
     private String sql;
-    ArrayList<Iglesia> lista = null;
-    public ArrayList<Iglesia> listarIglesia(){
-        lista = new ArrayList();
-        sql ="SELECT * FROM iglesia";
-        try{
-        cx = conexion.getConexion();
-        st = cx.createStatement();
-        rs=st.executeQuery(sql);
-        while(rs.next()){
-                Iglesia igl = new Iglesia();
-                igl.setIdi(rs.getInt(""));
-                igl.setIdd(rs.getInt(""));
-                igl.setIdti(rs.getInt(""));
-                igl.setNomiglesia(rs.getString(""));
-                igl.setCuenta(rs.getInt(""));
-        }
-        }catch (Exception e){
-        }
-        return lista;
+    private int op;
+    public int registrarIglesia(int idd,int idti,String nom, int cuenta){
+       sql = "INSERT INTO iglesia VALUES('"+idd+"', '"+idti+"','"+nom+"','"+cuenta+"')"; 
+       try{
+           cx = conexion.getConexion();
+           st = cx.createStatement();
+           op=st.executeUpdate(sql);
+       }catch (SQLException e){
+       }
+       return op;
     }
-    
 }

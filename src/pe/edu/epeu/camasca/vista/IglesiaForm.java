@@ -80,6 +80,11 @@ void cargarTipoIglesia(){
 
         btningresar.setBackground(new java.awt.Color(0, 153, 153));
         btningresar.setText("Registrar");
+        btningresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btningresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,6 +138,10 @@ void cargarTipoIglesia(){
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btningresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btningresarActionPerformed
+         
+    }//GEN-LAST:event_btningresarActionPerformed
 
     /**
      * @param args the command line arguments
