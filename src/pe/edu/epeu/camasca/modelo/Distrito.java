@@ -11,5 +11,9 @@ package pe.edu.epeu.camasca.modelo;
  * @author alum.fial7
  */
 public class Distrito {
+    private int idd;
+    private int idr;
+    private String disc;
+    private String estado;
     
 }
