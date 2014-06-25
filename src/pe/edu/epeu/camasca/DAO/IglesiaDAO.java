@@ -31,7 +31,12 @@ public class IglesiaDAO {
         st = cx.createStatement();
         rs=st.executeQuery(sql);
         while(rs.next()){
-                
+                Iglesia igl = new Iglesia();
+                igl.setIdi(rs.getInt(""));
+                igl.setIdd(rs.getInt(""));
+                igl.setIdti(rs.getInt(""));
+                igl.setNomiglesia(rs.getString(""));
+                igl.setCuenta(rs.getInt(""));
         }
         }catch (Exception e){
         }
