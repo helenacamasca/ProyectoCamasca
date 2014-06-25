@@ -10,9 +10,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import pe.edu.epeu.camasca.config.conexion;
-import pe.edu.epeu.camasca.modelo.Iglesia;
 
 /**
  *

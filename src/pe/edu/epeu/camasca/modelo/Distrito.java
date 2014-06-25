@@ -15,7 +15,7 @@ public class Distrito {
     private int idr;
     private String disc;
     private String estado;
-
+    
     public Distrito() {
     }
 
@@ -56,6 +56,5 @@ public class Distrito {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
-    
+
 }
